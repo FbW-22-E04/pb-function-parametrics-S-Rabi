@@ -1,8 +1,16 @@
 // Create a function howManyArgs which returns the total amount of arguments passed to it.
 // Example: passing 3 arguments when calling the function should return the number 3, passing 15 arguments should return the umber 15
 
-const howManyArgs = () => {};
+function howManyArgs() {
+  return arguments.length;
+}
 
 console.log(howManyArgs()); // -> 0
 console.log(howManyArgs(1, false, "hello")); // -> 3
 console.log(howManyArgs("better")); // -> 1
+
+function addNumbersV3(...sum1) {
+  console.log("numbers is", sum1);
+}
+
+addNumbersV3(1, 2, 3);
